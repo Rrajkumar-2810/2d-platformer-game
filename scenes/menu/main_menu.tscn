@@ -1,0 +1,82 @@
+[gd_scene load_steps=4 format=3 uid="uid://bw7wn4vbdtfcp"]
+
+[ext_resource type="Script" uid="uid://d1ep442jp87m7" path="res://scenes/menu/main_menu.gd" id="1_247la"]
+[ext_resource type="Texture2D" uid="uid://bgmnfwj15sesg" path="res://assets/background/Brown.png" id="2_kiqgm"]
+[ext_resource type="Texture2D" uid="uid://rruawx5muiwo" path="res://assets/menu/jumpfrog.png" id="3_hj162"]
+
+[node name="MainMenu" type="Node"]
+script = ExtResource("1_247la")
+
+[node name="TextureRect2_Background" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_kiqgm")
+stretch_mode = 1
+
+[node name="TextureRect_gamename" type="TextureRect" parent="."]
+texture_filter = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -310.0
+offset_top = -254.0
+offset_right = 278.0
+offset_bottom = -140.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_hj162")
+
+[node name="Button1_Level1" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = 0.194
+anchor_right = 0.5
+anchor_bottom = 0.194
+offset_left = -288.0
+offset_top = 128.288
+offset_right = -21.0
+offset_bottom = 219.288
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Level 1"
+
+[node name="Button2_Level2" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 38.0
+offset_top = -71.0
+offset_right = 305.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Level 2"
+
+[node name="Button3_Level3" type="Button" parent="."]
+anchors_preset = -1
+anchor_left = 0.366
+anchor_top = 0.623
+anchor_right = 0.366
+anchor_bottom = 0.623
+offset_left = -133.632
+offset_top = 0.29599
+offset_right = 133.368
+offset_bottom = 96.296
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 30
+text = "Level 3"
+
+[connection signal="pressed" from="Button1_Level1" to="." method="_on_button_1_level_1_pressed"]
+[connection signal="pressed" from="Button2_Level2" to="." method="_on_button_2_level_2_pressed"]
+[connection signal="pressed" from="Button3_Level3" to="." method="_on_button_3_level_3_pressed"]
